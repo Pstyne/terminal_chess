@@ -20,8 +20,7 @@ class Rook
   def make(move, pcs)
     legal_move = get_pos(move, pos)
     @pos = moves.include?(legal_move) ? move : pos unless pos[0].to_i > 7 || pos[0].to_i < 0 && pos[1].to_i > 7 || pos[1].to_i < 0
-    p pos
-    p pc_captured = pcs.find { |pc| pos == pc.pos && color != pc.color }
+    pc_captured = pcs.find { |pc| pos == pc.pos && color != pc.color }
     pcs.delete(pc_captured)
     @moves = []
   end
