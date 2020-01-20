@@ -37,7 +37,6 @@ class Rook
     i = 1
     while i <= 7
       move = [0, i]
-      # p "up: "+(pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}"
       return if pcs.find {|pc| pc.pos == (pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}" && pc.color == color}
       @moves << move
       i += 1
@@ -48,7 +47,6 @@ class Rook
     i = 1
     while i <= 7
       move = [0, -i]
-      # p "down: "+(pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}"
       return if pcs.find {|pc| pc.pos == (pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}" && pc.color == color}
       @moves << move
       i += 1
@@ -59,7 +57,6 @@ class Rook
     i = 1
     while i <= 7
       move = [-i, 0]
-      # p "left: "+(pos[0].ord + move[0]).chr+"#{move[1] + 1}"
       return if pcs.find {|pc| pc.pos == (pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}" && pc.color == color}
       @moves << move
       i += 1
@@ -70,7 +67,6 @@ class Rook
     i = 1
     while i <= 7
       move = [i, 0]
-      # p "right: "+(pos[0].ord + move[0]).chr+"#{move[1] + 1}"
       return if pcs.find {|pc| pc.pos == (pos[0].ord + move[0]).chr+"#{pos[1].to_i + move[1]}" && pc.color == color}
       @moves << move
       i += 1
